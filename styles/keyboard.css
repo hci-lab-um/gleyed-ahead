@@ -1,0 +1,771 @@
+﻿body {
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 65px;
+    background-color: none;
+}
+
+::-webkit-scrollbar-button {
+    width: 60px;
+    height: 60px;
+    background-color: gray;
+    border-radius: 40px;
+    color: white;
+}
+
+.keyBtn {
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    background-color: rgb(217, 217, 219);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 2.5em;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px #707070;
+    margin-left: 15px;
+    margin-bottom: 13px;
+}
+
+    .keyBtn:hover {
+        padding: 15px;
+        padding-right:18px;
+        margin: -3px;
+        margin-left:5px;
+        color: red;
+        border: solid 3px red;
+        background-color: white;
+    }
+
+.keyboard {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(74, 75, 76,.7);
+    z-index: -5;
+}
+.keyboard.darkTheme {
+    background-color:black;
+}
+.colourTheme{
+    background-color:blueviolet;
+    color:white;
+}
+.eyeRest {
+    width: 114px;
+    height: 195px;
+    background-color: cornflowerblue;
+    position: fixed;
+    top: 300px;
+    left: 20px;
+    padding: 50px;
+    text-align: center;
+    padding-top: 179px;
+    font-weight:600;
+}
+.keys {
+    width: auto;
+    margin: 0 auto;
+    position: fixed;
+    left: 18%;
+    bottom: 20px;
+    font-size: 1.7em;
+}
+.keyBtn.darkTheme{
+    background-color:white;
+}
+
+.spaceBtn {
+    width: 95%;
+    height: 3vw;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(217, 217, 219);
+    margin: 0 auto;
+    margin-top: 60px;
+    transition: all ease-in .05s;
+}
+
+    .spaceBtn:hover {
+        background-color: white;
+        color: red;
+        border: solid 2px red;
+        transition: all ease-in .05s;
+    }
+
+
+.suggestions,
+.textInput {
+    width: 65vw;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.7em;
+    /*border-bottom: solid black 2px;*/
+}
+
+.suggestions {
+    width: auto;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+.textInput {
+    width: 790px;
+    height: 180px;
+    margin: 0;
+    background-color: white;
+    border: double black 1px;
+    border-radius: 8px;
+    min-height: 50px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    position: absolute;
+    left: 226px;
+}
+
+.word {
+    font-size: 1.5em;
+    padding: 2px;
+    cursor: pointer;
+}
+
+    .word:hover {
+        border-radius: 5px;
+        animation-name: changeColor;
+        animation-duration: 1.2s;
+    }
+
+@keyframes changeColor {
+    0% {
+        background-color: rgba(154, 191, 249,.5);
+    }
+
+    30% {
+        background-color: rgba(154, 191, 249,.5);
+    }
+
+    100% {
+        background-color: rgba(69, 244, 66,.5);
+    }
+}
+.text{
+    color:white;
+    margin:0;
+}
+.suggestionBox {
+    padding: 5px;
+    padding-top: 10px;
+    background-color: rgb(154, 191, 249);
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    width: 17%;
+    height: 40px;
+    display: inline-block;
+    border: solid lightgray 1px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .suggestionBox:hover {
+        background-color: rgb(69, 244, 66);
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+    }
+
+.chosen {
+    background-color: rgba(69, 244, 66,.5);
+    border-radius: 5px;
+}
+
+/*.chosen:hover {
+        background-color: rgba(69, 244, 66,.3);
+      
+    }*/
+
+.voice,
+.clear,
+.Submit,
+.backSpace,
+.dwellFree {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 30px;
+    padding: 30px 20px;
+    border: solid gray 1px;
+    border-bottom-left-radius: 5px;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 18px;
+    box-shadow: 2px 2px 4px #585757;
+    background-color: rgb(217, 217, 219);
+}
+
+.on {
+    background-color: rgb(69, 244, 66);
+}
+
+.suggested {
+    color: lightgray;
+}
+
+.clear {
+    top: 150px;
+    font-weight: 500;
+    bottom: auto;
+}
+
+.dwellFree {
+    top: auto;
+    bottom: 10px;
+    right: 0;
+    left: auto;
+}
+
+.wrapper {
+    width: 80%;
+    margin-left: 220px;
+    display: inline-block;
+}
+
+.scrollbar
+ {
+    width: auto;
+    height: 163px;
+    max-height: 198px;
+    margin: 0;
+    display: inline-block;
+    padding: 15px;
+    padding-top: 100px;
+    position: absolute;
+    left: 1033px;
+    background-color: rgb(154, 191, 249);
+    border: solid 2px gray;
+}
+.TTS {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    position: fixed;
+    right: 3%;
+    top: 7%;
+    background-color: rgb(154, 191, 249);
+    border: solid 2px gray;
+    text-align: center;
+}
+
+.TTS i{
+    margin-top:33px;
+}
+.color {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    position: fixed;
+    right: 3%;
+    top: 35%;
+    background-color: rgb(154, 191, 249);
+    border: solid 2px gray;
+    text-align: center;
+}
+
+.color i{
+    margin-top:33px;
+}
+.exit,
+.voiceDiv,
+.themeDiv{
+    display:inline-block;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    background-color:dodgerblue;
+    color:white;
+    width:92%;
+    height:50px;
+    font-size:1.3em;
+    font-weight:600;
+    cursor:pointer;
+}
+.voiceDiv:hover,
+.themeDiv:hover{
+    animation-name:vdHover;
+    animation-duration:2s;
+}
+@keyframes vdHover{
+    0%{
+        background-color:dodgerblue;
+    }
+    90% {
+        background-color: rgb(69, 244, 66);
+    }
+    100% {
+        background-color: rgb(69, 244, 66);
+    }
+
+}
+.exit{
+    background-color:red;
+    text-align:center;
+}
+
+.exit:hover {
+    animation-name: exitHover;
+    animation-duration: 1.5s;
+}
+
+@keyframes exitHover {
+    0% {
+        background-color: red;
+    }
+
+    90% {
+        background-color: gray;
+    }
+
+    100% {
+        background-color: gray;
+    }
+}
+
+.exit {
+    background-color: red;
+    text-align: center;
+}
+@media screen and (max-width:892px){
+    .voiceDiv {
+        width:90%;
+    }
+}
+/*.TTS {
+    left: 1089px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}*/
+
+.disabled {
+    background-color: lightgray;
+    color: gray;
+    cursor: not-allowed;
+}
+
+.scrollbar {
+    display: block;
+    padding: 0;
+    width: 56px;
+    height: 279px;
+}
+
+.scroll-up,
+.scroll-down {
+    display: block;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+    .scroll-up:hover,
+    .scroll-down:hover {
+        animation-name: highlight;
+        animation-duration: 1s;
+        background-color: rgba(69, 244, 66,1);
+    }
+
+@keyframes highlight {
+    0% {
+        background-color: lightgray;
+    }
+
+    100% {
+        background-color: rgba(69, 244, 66,.8);
+    }
+}
+
+.fa-caret-up, .fa-caret-down {
+    padding-top: 85%;
+}
+
+#loaded,
+#load {
+    visibility: hidden;
+    margin-left: 48%;
+}
+
+#loaded {
+    color: green;
+}
+
+.enabledTTS:hover, .color:hover {
+    animation-name: TTShover;
+    animation-duration: 1.5s;
+}
+
+@keyframes TTShover {
+    0% {
+        background-color: lightgray;
+    }
+
+    90% {
+        background-color: rgb(69, 244, 66);
+    }
+
+    100% {
+        background-color: lightgray;
+    }
+}
+
+.Submit {
+    top: auto;
+    bottom: 10px;
+}
+
+.voice {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 110px;
+}
+
+    
+    .voice:hover,
+    .clear:hover,
+    .Submit:hover,
+    .dwellBased:hover,
+    .backSpace:hover,
+    .dwellFreeHover {
+        color: white;
+        background-color: rgb(146, 146, 147);
+        font-weight: 700;
+        cursor:pointer;
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+    }
+
+    .voice:hover,
+    .clear:hover,
+    .Submit:hover,
+    .backSpace:hover,
+    .dwellFreeHover {
+        padding: 33px 23px;
+    }
+
+.voiceChanger, .themeChooser {
+    position:fixed;
+    width:80vw;
+    height:80vh;
+    background-color:rgb(245, 245, 245);
+    top:10vh;
+    left:10vw;
+    z-index:1001;
+    display:none;
+}
+.cover{
+    z-index:1000;
+    background-color:rgba(128, 128, 128,0.7);
+    position:fixed;
+    display:none;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+}
+.backSpace {
+    background-color: rgba(244, 66, 66,1);
+    color: white;
+}
+
+@media screen and (max-height: 825px) {
+    .scrollbar {
+        height: 213px;
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 70%;
+    }
+
+    /*.TTS {
+        height: 110px;
+        padding-top: 88px;
+    }*/
+
+    .textInput {
+        height: 195px;
+    }
+
+    .keyBtn {
+        width: 4vw;
+        height: 4vw;
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .textInput {
+        width: 1035px;
+    }
+
+    /*.TTS {
+        left: 1335px;
+    }*/
+
+    .scrollbar {
+        left: 1277px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .scrollbar {
+        left: 1243px;
+    }
+
+    /*.TTS {
+        left: 1300px;
+    }*/
+
+    .textInput {
+        width: 1000px;
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 70%;
+    }
+
+    .keyBtn {
+        width: 4vw;
+        height: 4vw;
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .scrollbar {
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 68%;
+    }
+
+    .keyBtn {
+        width: 4vw;
+        height: 4vw;
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .scrollbar {
+        left: 1492px;
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 70%;
+    }
+
+    /*.TTS {
+        left: 1550px;
+    }*/
+
+    .textInput {
+        width: 1250px;
+    }
+
+    .keyBtn {
+        width: 4.5vw;
+        height: 4.5vw;
+        font-size: 1.9em;
+    }
+}
+
+@media screen and (max-width: 1416px) {
+    .keyBtn {
+        width: 4vw;
+        font-size: 1.8em;
+    }
+
+
+    .textInput {
+        font-size: 1.5em;
+    }
+
+    .spaceBtn {
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .textInput {
+        width: 850px;
+    }
+
+    /*.TTS {
+        left: 1151px;
+    }*/
+
+    .scrollbar {
+        left: 1092px;
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 67%;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .suggestionBox {
+        width: 16%;
+    }
+
+    .suggestions,
+    .textInput {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .suggestions,
+    .textInput {
+    }
+
+    .keys {
+        width: 54vw;
+        left: 23%;
+        top: 300px;
+    }
+
+    .keyBtn {
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
+
+@media screen and (min-width: 3840px) {
+    .suggestions,
+    .textInput {
+        width: 54vw;
+    }
+
+    .keys {
+        width: 39vw;
+        left: 30.5%;
+        top: 350px;
+    }
+
+    .keyBtn {
+        width: 3vw;
+        height: 3vw;
+        font-size: 3em;
+    }
+
+
+
+    .backSpace,
+    .dwellFree {
+        width: 140px;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .textInput {
+        width: 780px;
+    }
+
+    /*.TTS {
+        left: 1077px;
+    }*/
+
+    .scrollbar {
+        left: 1020px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .textInput {
+        width: 1450px;
+    }
+
+    /*.TTS {
+        left: 1697px;
+    }*/
+
+    .scrollbar {
+        left: 1640px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .textInput {
+        width: 620px;
+        height: 140px;
+    }
+
+    /*.TTS {
+        left: 919px;
+        height: 72px;
+        padding-top: 72px;
+    }*/
+
+    .scrollbar {
+        left: 862px;
+        height: 159px
+    }
+
+    .fa-caret-down,
+    .fa-caret-up {
+        padding-top: 46%;
+    }
+
+    .keyBtn {
+        font-size: 1.2em;
+    }
+
+    .clear, .Submit, .backSpace, .dwellFree,.voice {
+        width: 60px;
+    }
+
+    .suggestionBox {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .textInput {
+        width: 550px;
+    }
+
+    /*.TTS {
+        left: 839px;
+    }*/
+
+    .scrollbar {
+        left: 791px;
+    }
+}

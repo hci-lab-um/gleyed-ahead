@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/keyboard.js"></script>
+    <link href="styles/keyboard.css" type="text/css" rel="stylesheet" />
+    <link href="fonts\web-fonts-with-css\css\fontawesome-all.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="keyboard" id="keyboard">
+        <div class="wrapper">
+            <div class="textInput" id="textInput"></div>
+           
+            <div class="scrollbar" id="tts">
+                <span class="scroll-up"><i class="fas fa-caret-up fa-2x"></i></span>
+                <span class="scroll-down"><i class="fas fa-caret-down fa-2x"></i></span>
+            </div>
+        </div>
+        
+        <div class="TTS  disabled" id="tts"><i class="fas fa-volume-off fa-2x"></i></div>
+        <div class="color" id="clr"><i class="fas fa-palette fa-2x"></i></div>
+        <div class="keys" id="keys"></div>
+        <div class="voiceChanger"></div>
+        <div class="themeChooser">
+			<div class="themeDiv" id="t1">Normal</div>
+			<div class="themeDiv" id="t2">Dark</div>
+			<div class="themeDiv" id="t3">Colour</div>
+			<div class="exit"><i class="fas fa-circle-left"></i> Back</div>
+		</div>
+        <div class="eyeRest"><i class="far fa-eye-slash fa-2x"></i><br />Eye Rest</div>
+        <div class="cover"></div>
+    </div>
+</body>
+</html>
