@@ -1,5 +1,5 @@
-# Swift-ahead
-Swift-ahead - swipe-typing for eye-based interaction with type ahead functionality
+# Gleyed-ahead
+Gleyed-ahead - swipe-typing for eye-based interaction with type ahead functionality
 
 This project was developed at the University of Malta (HCI Lab) by Karen Dimech and Bernine Caruana under the supervision of Chris Porter.
 
